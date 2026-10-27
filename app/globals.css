@@ -73,6 +73,11 @@ button, input { font: inherit; } button { cursor: pointer; }
 	.saved-placeholder { min-height: calc(100vh - 190px); }
 }
 
+.scan-examples { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin: -7px 0 14px; }
+.scan-example { border: 1px solid var(--line); background: white; border-radius: 8px; padding: 4px; color: var(--muted); font: 10px Arial, sans-serif; text-align: left; }
+.scan-example.active { border-color: var(--green); color: var(--green); box-shadow: 0 0 0 1px var(--green); }
+.scan-example img { width: 100%; height: 45px; object-fit: cover; border-radius: 5px; display: block; margin-bottom: 4px; }
+
 @media (min-width: 700px) and (max-width: 960px) {
 	.app-shell { max-width: 860px; }
 	.topbar, .home-hero, .why, .screen-pad { padding-left: 38px; padding-right: 38px; }

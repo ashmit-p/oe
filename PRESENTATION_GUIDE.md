@@ -195,21 +195,16 @@ Purpose:
 
 Behavior:
 
-- A refrigerator image is displayed.
+- Three deterministic refrigerator examples are available so the scan demo can be repeated with different pantry states.
 - Detection labels appear over the image.
 - A scanning line animates for approximately 1.2 seconds.
-- The screen presents five detected ingredients:
-  - Eggs, quantity 4
-  - Spinach
-  - Tomato, quantity 2
-  - Bread, quantity 4 slices
-  - Onion, quantity 1
+- The selected image presents a different detected ingredient set, including breakfast, weeknight basics, and fresh chicken/rice examples.
 
 The `Looks right` button always proceeds to constraints because the goal is a reliable demo path.
 
 Presentation talking point:
 
-> This is a simulated computer-vision step in the prototype. In a production build, this surface would connect to a camera flow and an ingredient recognition service.
+> This is a deterministic computer-vision simulation for the proof of concept. The selected pantry is passed into a local recommendation engine, so changing the scan example changes the recipe results.
 
 ### 7.3 Manual Ingredients
 
@@ -556,7 +551,7 @@ The following are intentionally mocked or simplified:
 - No real-time functionality
 - No saved-meal persistence
 - No countdown timer
-- Constraint changes do not recalculate the hardcoded rankings
+- Recommendations are generated from a local recipe catalog and recalculate from entered ingredients, time, and nutrition choices
 - Images are loaded from remote Unsplash URLs
 
 These boundaries should be described as deliberate prototype decisions, not missing production features.
